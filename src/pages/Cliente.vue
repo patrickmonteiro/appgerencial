@@ -33,17 +33,18 @@
         <template v-slot:body-cell-action="props">
         <q-td :props="props">
           <div class="q-gutter-sm">
-            <q-btn
+            <!-- <q-btn
               icon="search"
               color="secondary"
               size="sm"
               dense
-            />
+            /> -->
             <q-btn
               icon="create"
               color="primary"
               size="sm"
               dense
+              @click="editarCliente(props.row.cdcliente)"
             />
             <q-btn
               icon="delete"
@@ -129,6 +130,9 @@ export default {
     },
     cadastrarCliente () {
       this.$router.push({ name: 'cadastroCliente' })
+    },
+    editarCliente (id) {
+      this.$router.push({ name: 'cadastroCliente', query: { cdcliente: id } })
     }
   }
 }

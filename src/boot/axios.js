@@ -2,8 +2,8 @@ import Vue from 'vue'
 import axios from 'axios'
 
 const HttpClient = axios.create({
-  // baseURL: 'http://881f394105ef.ngrok.io'
-  baseURL: 'http://localhost:3333'
+  baseURL: 'http://62cb40c835bc.ngrok.io'
+  // baseURL: 'http://localhost:3333'
 })
 
 HttpClient.interceptors.request.use(config => {
